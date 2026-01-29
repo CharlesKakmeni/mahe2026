@@ -1,29 +1,30 @@
 import Image from "next/image";
-import Container from "@/components/Container";
-import { cn } from "@/lib/cn";
 
 export default function SectionMessage() {
   return (
     <section className="bg-cream">
-      <Container
-        className={cn(
-          "pt-14 md:pt-18 pb-4 md:pb-12",
-          "lg:pl-0 lg:pr-40" // desktop: left shift
-        )}
-      >
-        <div className="text-center">
-          <p
-            className="text-4xl md:text-6xl text-ink tracking-wide"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
-            21 JUILLET, 2026
-          </p>
-          <p className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.35em] text-muted">
-            Mahé, Seychelles
-          </p>
+      {/* Mobile: padding confortable | Desktop: plus à gauche */}
+      <div className="mx-auto max-w-6xl px-5 sm:px-4 pt-14 md:pt-18 pb-4 md:pb-12 lg:pl-0 lg:pr-40 lg:pb-6">
+        {/* Date block (centré même en desktop décalé) */}
+        <div className="w-full flex justify-center">
+          <div className="text-center">
+            <p
+              className="text-4xl md:text-6xl text-ink tracking-wide"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
+              21 JUILLET, 2026
+            </p>
+
+            {/* ✅ Nouvelle baseline (créative, non redondante) */}
+            <p className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.35em] text-muted">
+              Une journée à célébrer ensemble
+            </p>
+          </div>
         </div>
 
+        {/* Content */}
         <div className="mt-7 md:mt-12 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          {/* Image */}
           <div className="relative">
             <div className="rounded-xl2 overflow-hidden shadow-soft border border-black/5 bg-white">
               <Image
@@ -36,14 +37,17 @@ export default function SectionMessage() {
             </div>
           </div>
 
+          {/* Text */}
           <div>
-
+            <p className="uppercase tracking-[0.35em] text-xs text-muted">
+              Un mot des mariés
+            </p>
 
             <h2
-              className="mt-3 text-3xl md:text-5xl text-ink"
+              className="mt-3 text-4xl md:text-5xl text-ink"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              Un mot des mariés
+              Arlette &amp; Paul-Richard
             </h2>
 
             <p className="mt-5 text-muted leading-relaxed">
@@ -58,12 +62,13 @@ export default function SectionMessage() {
             </p>
 
             <p className="mt-5 text-ink/80" style={{ fontFamily: "var(--font-script)" }}>
-              Avec amour, Arlette & Paul-Richard
+              Avec amour, Arlette &amp; Paul-Richard
             </p>
           </div>
         </div>
-      </Container>
+      </div>
 
+      {/* Divider */}
       <div className="h-2 md:h-12 bg-gradient-to-b from-cream to-cream/60" />
     </section>
   );

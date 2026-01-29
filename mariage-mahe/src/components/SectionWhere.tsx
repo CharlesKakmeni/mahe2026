@@ -1,18 +1,20 @@
 import Image from "next/image";
 import Countdown from "./Countdown";
-import Container from "@/components/Container";
-import { cn } from "@/lib/cn";
 
 export default function SectionWhere() {
   return (
     <section className="bg-cream">
-      <Container
-        className={cn(
-          "pt-8 pb-12 md:py-20",
-          "lg:pr-0 lg:pl-40" // desktop: right shift
-        )}
+      {/* Mobile: padding confortable | Tablette: plus de marge | Desktop: décale à droite mais moins */}
+      <div
+        className="
+          mx-auto max-w-6xl
+          px-5 sm:px-4 md:px-6
+          pt-8 pb-12 md:py-20
+          lg:pr-0 lg:pl-24 lg:pt-10 lg:pb-14
+        "
       >
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          {/* Image + countdown */}
           <div className="relative">
             <div className="relative rounded-xl2 overflow-hidden shadow-soft border border-black/5">
               <Image
@@ -29,6 +31,7 @@ export default function SectionWhere() {
             </div>
           </div>
 
+          {/* Text */}
           <div className="pt-6 lg:pt-2">
             <p className="uppercase tracking-[0.35em] text-xs text-muted">
               Where it all happens
@@ -45,7 +48,6 @@ export default function SectionWhere() {
               Nous vous donnons rendez-vous sur l’île de Mahé, entre lagons turquoise, reliefs tropicaux
               et couchers de soleil inoubliables.
               <span className="block mt-3">
-                
                 <span className="text-ink/80 font-semibold">Tenue :</span> Chic & tropical
               </span>
             </p>
@@ -57,19 +59,21 @@ export default function SectionWhere() {
           </div>
         </div>
 
+        {/* spacing because countdown overlaps */}
         <div className="h-16 md:h-20" />
-      </Container>
+      </div>
 
+      {/* Band */}
       <div className="bg-forest">
-        <Container className="py-10 text-center">
+        <div className="mx-auto max-w-6xl px-5 sm:px-4 md:px-6 py-10 text-center">
           <p className="text-cream/90 uppercase tracking-[0.30em] text-xs">
             Infos pratiques
           </p>
           <p className="mt-2 text-cream/75 text-sm">
-            Toutes les informations pratiques — notamment les formalités d’entrée aux Seychelles —
+            Toutes les informations pratiques, notamment les formalités d’entrée aux Seychelles,
             sont disponibles dans la page FAQ.
           </p>
-        </Container>
+        </div>
       </div>
     </section>
   );

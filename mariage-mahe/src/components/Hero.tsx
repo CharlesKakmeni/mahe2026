@@ -63,9 +63,7 @@ export default function Hero() {
               >
                 Mahé, Seychelles
               </p>
-              <p className="text-white/80 text-xs sm:text-sm tracking-wider">
-                Cérémonie &amp; célébration — Juillet 2026
-              </p>
+
             </div>
           </div>
         </div>
