@@ -37,15 +37,13 @@ export default function SectionMessage() {
           </div>
 
           <div>
-            <p className="uppercase tracking-[0.35em] text-xs text-muted">
-              Un mot des mariés
-            </p>
+
 
             <h2
-              className="mt-3 text-4xl md:text-5xl text-ink"
+              className="mt-3 text-3xl md:text-5xl text-ink"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              Arlette & Paul-Richard
+              Un mot des mariés
             </h2>
 
             <p className="mt-5 text-muted leading-relaxed">

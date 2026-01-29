@@ -5,7 +5,8 @@ import { useState } from "react";
 type Item = { q: string; a: React.ReactNode };
 
 export default function FAQAccordion({ items }: { items: Item[] }) {
-  const [open, setOpen] = useState<number | null>(0);
+  // ✅ Tout fermé par défaut
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <div className="w-full">
@@ -19,9 +20,11 @@ export default function FAQAccordion({ items }: { items: Item[] }) {
                 type="button"
                 onClick={() => setOpen(isOpen ? null : idx)}
                 className="w-full flex items-center justify-between gap-6 text-left"
-                aria-expanded={isOpen}
               >
-                <span className="text-ink text-[15px] md:text-base">{it.q}</span>
+                <span className="text-ink text-[15px] md:text-base">
+                  {it.q}
+                </span>
+
                 <span className="shrink-0 text-gold text-lg leading-none">
                   {isOpen ? "×" : "+"}
                 </span>

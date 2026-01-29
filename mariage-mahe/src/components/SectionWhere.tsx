@@ -45,10 +45,7 @@ export default function SectionWhere() {
               Nous vous donnons rendez-vous sur l’île de Mahé, entre lagons turquoise, reliefs tropicaux
               et couchers de soleil inoubliables.
               <span className="block mt-3">
-                <span className="text-ink/80 font-semibold">Lieu :</span> Mahé — Seychelles{" "}
-                <span className="text-ink/40">•</span>{" "}
-                <span className="text-ink/80 font-semibold">Date :</span> 21 juillet{" "}
-                <span className="text-ink/40">•</span>{" "}
+                
                 <span className="text-ink/80 font-semibold">Tenue :</span> Chic & tropical
               </span>
             </p>
