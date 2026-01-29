@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #F6F1E7;
+  color: #1A1A1A;
+}
+
+/* Hero crossfade */
+@keyframes fadeA {
+  0%, 28% { opacity: 1 }
+  33%, 95% { opacity: 0 }
+  100% { opacity: 1 }
+}
+@keyframes fadeB {
+  0%, 28% { opacity: 0 }
+  33%, 61% { opacity: 1 }
+  66%, 100% { opacity: 0 }
+}
+@keyframes fadeC {
+  0%, 61% { opacity: 0 }
+  66%, 95% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.hero-img-a { animation: fadeA 18s infinite ease-in-out; }
+.hero-img-b { animation: fadeB 18s infinite ease-in-out; }
+.hero-img-c { animation: fadeC 18s infinite ease-in-out; }
+
+@layer base {
+  p {
+    @apply text-justify;
+  }
+
+  li {
+    @apply text-justify;
+  }
+}
