@@ -1,11 +1,16 @@
 import Image from "next/image";
+import Container from "@/components/Container";
+import { cn } from "@/lib/cn";
 
 export default function SectionMessage() {
   return (
     <section className="bg-cream">
-      {/* Mobile: padding + confortable | Desktop: plus à gauche */}
-      <div className="mx-auto max-w-6xl px-5 sm:px-4 pt-14 md:pt-18 pb-4 md:pb-12 lg:pl-0 lg:pr-40">
-        {/* Date block */}
+      <Container
+        className={cn(
+          "pt-14 md:pt-18 pb-4 md:pb-12",
+          "lg:pl-0 lg:pr-40" // desktop: left shift
+        )}
+      >
         <div className="text-center">
           <p
             className="text-4xl md:text-6xl text-ink tracking-wide"
@@ -18,9 +23,7 @@ export default function SectionMessage() {
           </p>
         </div>
 
-        {/* Content */}
         <div className="mt-7 md:mt-12 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Image */}
           <div className="relative">
             <div className="rounded-xl2 overflow-hidden shadow-soft border border-black/5 bg-white">
               <Image
@@ -33,7 +36,6 @@ export default function SectionMessage() {
             </div>
           </div>
 
-          {/* Text */}
           <div>
             <p className="uppercase tracking-[0.35em] text-xs text-muted">
               Un mot des mariés
@@ -62,9 +64,8 @@ export default function SectionMessage() {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
 
-      {/* Divider (quasi nul sur mobile pour éviter le grand espace) */}
       <div className="h-2 md:h-12 bg-gradient-to-b from-cream to-cream/60" />
     </section>
   );

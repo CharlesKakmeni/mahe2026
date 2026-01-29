@@ -19,9 +19,9 @@ export default function FAQAccordion({ items }: { items: Item[] }) {
                 type="button"
                 onClick={() => setOpen(isOpen ? null : idx)}
                 className="w-full flex items-center justify-between gap-6 text-left"
+                aria-expanded={isOpen}
               >
                 <span className="text-ink text-[15px] md:text-base">{it.q}</span>
-
                 <span className="shrink-0 text-gold text-lg leading-none">
                   {isOpen ? "×" : "+"}
                 </span>

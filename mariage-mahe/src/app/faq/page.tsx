@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import FAQAccordion from "@/components/FAQAccordion";
 
 const items = [
@@ -5,11 +6,10 @@ const items = [
     q: "Quelles sont les formalités d’entrée aux Seychelles ?",
     a: (
       <>
-        Les Seychelles ne demandent pas de visa préalable pour de nombreuses
-        nationalités (notamment Camerounaise, Congolaise, Nigériane, Française,
-        Américaine, Canadienne). En revanche, tous les voyageurs — quelle que
-        soit leur nationalité — doivent obtenir une autorisation de voyage en
-        ligne avant le départ (Travel Authorization).
+        Les Seychelles ne demandent pas de visa préalable pour de nombreuses nationalités (notamment
+        Camerounaise, Congolaise, Nigériane, Française, Américaine, Canadienne). En revanche, tous
+        les voyageurs — quelle que soit leur nationalité — doivent obtenir une autorisation de voyage
+        en ligne avant le départ (Travel Authorization).
         <br />
         <br />
         La demande se fait sur le site officiel :{" "}
@@ -24,10 +24,9 @@ const items = [
         .
         <br />
         <br />
-        Les documents requis sont généralement : un passeport valide, un billet
-        aller-retour, une confirmation d’hébergement et une preuve de moyens
-        financiers. L’autorisation de voyage doit être présentée à l’embarquement
-        ainsi qu’à l’arrivée.
+        Les documents requis sont généralement : un passeport valide, un billet aller-retour, une
+        confirmation d’hébergement et une preuve de moyens financiers. L’autorisation de voyage doit
+        être présentée à l’embarquement ainsi qu’à l’arrivée.
       </>
     ),
   },
@@ -56,7 +55,7 @@ const items = [
 export default function FAQPage() {
   return (
     <main className="pt-16 bg-cream">
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <Container className="py-12 md:py-16">
         <div className="text-center">
           <h1
             className="text-3xl md:text-5xl text-ink"
@@ -69,7 +68,7 @@ export default function FAQPage() {
         <div className="mt-10 md:mt-12 mx-auto max-w-4xl">
           <FAQAccordion items={items} />
         </div>
-      </section>
+      </Container>
     </main>
   );
 }

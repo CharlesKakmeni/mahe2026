@@ -1,3 +1,6 @@
+import Container from "@/components/Container";
+import { cn } from "@/lib/cn";
+
 const events = [
   {
     time: "14:00",
@@ -28,12 +31,9 @@ const events = [
 export default function ProgrammePage() {
   return (
     <main className="pt-16 bg-cream">
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        {/* Title */}
+      <Container className="py-12 md:py-16">
         <div className="text-center">
-          <p className="uppercase tracking-[0.35em] text-xs text-muted">
-            Le jour J
-          </p>
+          <p className="uppercase tracking-[0.35em] text-xs text-muted">Le jour J</p>
           <h1
             className="mt-3 text-4xl md:text-5xl text-ink"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -45,13 +45,9 @@ export default function ProgrammePage() {
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="mt-12 md:mt-14">
           <div className="relative">
-            {/* Center line (desktop) */}
             <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gold/70" />
-
-            {/* Left line (mobile) */}
             <div className="md:hidden absolute left-4 top-0 h-full w-px bg-gold/70" />
 
             <div className="space-y-10 md:space-y-12">
@@ -60,29 +56,24 @@ export default function ProgrammePage() {
 
                 return (
                   <div key={ev.time + ev.title} className="relative">
-                    {/* Dot */}
                     <div
-                      className={[
+                      className={cn(
                         "absolute top-6 h-2.5 w-2.5 rounded-full bg-gold",
                         "shadow-[0_0_0_4px_rgba(183,155,108,0.18)]",
                         "md:left-1/2 md:-translate-x-1/2",
-                        "left-4 -translate-x-1/2 md:translate-x-0",
-                      ].join(" ")}
+                        "left-4 -translate-x-1/2 md:translate-x-0"
+                      )}
                     />
 
-                    {/* Card wrapper */}
                     <div className="grid md:grid-cols-2 gap-6 items-start">
-                      {/* Left column (desktop) */}
-                      <div className={["hidden md:block", isLeft ? "md:pr-10" : ""].join(" ")}>
+                      <div className={cn("hidden md:block", isLeft && "md:pr-10")}>
                         {isLeft && <ProgramCard {...ev} align="left" />}
                       </div>
 
-                      {/* Right column (desktop) */}
-                      <div className={["hidden md:block", !isLeft ? "md:pl-10" : ""].join(" ")}>
+                      <div className={cn("hidden md:block", !isLeft && "md:pl-10")}>
                         {!isLeft && <ProgramCard {...ev} align="right" />}
                       </div>
 
-                      {/* Mobile: single column cards */}
                       <div className="md:hidden pl-10">
                         <ProgramCard {...ev} align="left" />
                       </div>
@@ -94,12 +85,9 @@ export default function ProgrammePage() {
           </div>
         </div>
 
-        {/* ✅ Green note card (kept at the end) */}
         <div className="mt-14 md:mt-16">
           <div className="mx-auto max-w-3xl p-6 rounded-xl2 bg-forest text-cream border border-white/10 shadow-soft">
-            <p className="uppercase tracking-[0.28em] text-[11px] text-cream/80">
-              À noter
-            </p>
+            <p className="uppercase tracking-[0.28em] text-[11px] text-cream/80">À noter</p>
             <p className="mt-2 text-sm text-cream/90 leading-relaxed">
               Les horaires peuvent évoluer légèrement. Nous mettrons cette page à jour si besoin à
               mesure que l’on se rapproche du jour J.
@@ -110,7 +98,7 @@ export default function ProgrammePage() {
             Une question ? Consulte la FAQ ou écris-nous via RSVP.
           </p>
         </div>
-      </section>
+      </Container>
     </main>
   );
 }
@@ -128,19 +116,16 @@ function ProgramCard({
 }) {
   return (
     <div
-      className={[
+      className={cn(
         "rounded-xl2 bg-white/70 border border-black/5 shadow-soft",
         "px-6 py-5",
         "md:hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] md:transition-shadow",
-        align === "right" ? "md:ml-auto" : "",
-      ].join(" ")}
+        align === "right" && "md:ml-auto"
+      )}
       style={{ maxWidth: 360 }}
     >
       <p className="text-gold text-sm tracking-wider">{time}</p>
-      <h3
-        className="mt-1 text-xl text-ink"
-        style={{ fontFamily: "var(--font-serif)" }}
-      >
+      <h3 className="mt-1 text-xl text-ink" style={{ fontFamily: "var(--font-serif)" }}>
         {title}
       </h3>
       <p className="mt-2 text-sm text-muted leading-relaxed">{desc}</p>
