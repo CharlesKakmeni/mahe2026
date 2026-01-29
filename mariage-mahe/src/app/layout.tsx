@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Great_Vibes, Cormorant_Garamond, Inter } from "next/font/google";
+import { Alex_Brush, Cormorant_Garamond, Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const script = Great_Vibes({
+const script = Alex_Brush({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
@@ -22,8 +22,8 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arlette & Paul-Richard — Mariage à Mahé",
-  description: "Mariage Arlette & Paul-Richard — Mahé, Seychelles",
+  title: "Arlette & Paul Richard — Mariage à Mahé",
+  description: "Mariage Arlette & Paul Richard — Mahé, Seychelles",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

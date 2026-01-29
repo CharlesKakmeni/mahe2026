@@ -31,12 +31,27 @@ const items = [
     ),
   },
   {
-    q: "Quelle est la tenue vestimentaire recommandée ?",
-    a: "Une tenue chic & tropical : matières légères, tons naturels, et chaussures adaptées. L’objectif est d’être élégant tout en restant à l’aise.",
+    q: "Quel temps fera-t-il aux Seychelles en juillet ?",
+    a: "Le mois de juillet correspond à la saison sèche aux Seychelles. Il fait généralement beau et agréable, avec des températures autour de 24 à 28°C.",
   },
   {
-    q: "Puis-je amener des enfants ?",
-    a: "Merci de vous référer à votre invitation. Si vous avez un doute, écrivez-nous via la page RSVP.",
+    q: "Quelle est la monnaie utilisée aux Seychelles ?",
+    a: (
+      <>
+        La monnaie officielle est la roupie seychelloise (SCR). Cependant, les euros (€) sont très
+        souvent acceptés dans les hôtels, restaurants et lieux touristiques.
+        <br />
+        <br />
+        À titre indicatif : 1 € ≈ 16 à 17 roupies seychelloises (SCR).{" "}
+        <span className="text-muted">
+          (Le taux peut légèrement varier selon les lieux de change.)
+        </span>
+      </>
+    ),
+  },
+  {
+    q: "Quelle est la tenue vestimentaire recommandée ?",
+    a: "Une tenue chic & colorée : matières légères, tons naturels, et chaussures adaptées. L’objectif est d’être élégant tout en restant à l’aise.",
   },
   {
     q: "Y a-t-il des hébergements à proximité ?",
@@ -44,11 +59,15 @@ const items = [
   },
   {
     q: "Quand dois-je confirmer ma présence ?",
-    a: "Merci de confirmer votre présence dès que possible via le formulaire RSVP.",
+    a: "Merci de confirmer votre présence avant le 14 Février 2026, via le formulaire RSVP.",
+  },
+   {
+    q: "Y a-t-il une liste de cadeaux ?",
+    a: "« Oui » encore une fois, avec vous à nos côtés.\n Votre présence pour célébrer ce renouvellement de vœux est le plus précieux des cadeaux.\n Cependant, la cérémonie ayant lieu à l’étranger, les présents matériels ne pourront être aisément acheminés.\n Pour ceux qui le souhaitent, une cagnotte sera proposée afin de nous accompagner dans la suite de cette belle aventure.",
   },
   {
-    q: "Y a-t-il une liste de mariage ?",
-    a: "Votre présence est le plus beau des cadeaux. Nous partagerons les détails d’une liste de mariage si nécessaire, plus près de la date.",
+    q: "Qui contacter en cas de question ?",
+    a: "Pour toute question concernant le mariage ou l’organisation du séjour, vous pouvez contacter Arlette.",
   },
 ];
 

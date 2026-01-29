@@ -7,20 +7,20 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-1.jpg"
-          alt="Arlette & Paul-Richard"
+          alt="Arlette & Paul Richard"
           fill
           priority
           className="object-cover hero-img-a"
         />
         <Image
           src="/images/hero-2.jpg"
-          alt="Arlette & Paul-Richard"
+          alt="Arlette & Paul Richard"
           fill
           className="object-cover hero-img-b"
         />
         <Image
           src="/images/hero-3.jpg"
-          alt="Arlette & Paul-Richard"
+          alt="Arlette & Paul Richard"
           fill
           className="object-cover hero-img-c"
         />
@@ -34,9 +34,8 @@ export default function Hero() {
       <div className="relative z-10 h-full flex items-end pb-24 sm:pb-20 lg:items-center lg:pb-0">
         <div className="mx-auto max-w-6xl px-5 sm:px-4 w-full">
           <div className="max-w-[680px] mx-auto text-center">
-            {/* ✅ Forcé centré, quoi qu’il arrive */}
             <p className="w-full text-center text-white/85 uppercase tracking-[0.35em] text-[11px] sm:text-sm">
-              Mariage religieux &amp; célébration
+              Renouvellement des voeux 
             </p>
 
             <h1
@@ -48,11 +47,11 @@ export default function Hero() {
               </span>
 
               <span className="block drop-shadow mt-2 text-[clamp(38px,9.5vw,70px)]">
-                &amp; 
+                &amp;
               </span>
 
-                <span className="block drop-shadow mt-2 text-[clamp(38px,9.5vw,70px)]">
-                Paul-Richard
+              <span className="block drop-shadow mt-2 text-[clamp(38px,9.5vw,70px)]">
+                Paul Richard
               </span>
             </h1>
 
@@ -63,7 +62,6 @@ export default function Hero() {
               >
                 Mahé, Seychelles
               </p>
-
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function SectionWhere() {
           {/* Text */}
           <div className="pt-6 lg:pt-2">
             <p className="uppercase tracking-[0.35em] text-xs text-muted">
-              Where it all happens
+              Là où tout se célèbre 
             </p>
 
             <h2
@@ -45,16 +45,28 @@ export default function SectionWhere() {
             </h2>
 
             <p className="mt-5 text-muted leading-relaxed">
-              Nous vous donnons rendez-vous sur l’île de Mahé, entre lagons turquoise, reliefs tropicaux
-              et couchers de soleil inoubliables.
-              <span className="block mt-3">
-                <span className="text-ink/80 font-semibold">Tenue :</span> Chic & tropical
-              </span>
+              Nous vous invitons à célébrer nos renouvellement des vœux du 20 au 22 juillet.
             </p>
 
+            {/* ✅ Lieu / Date / Tenue ligne par ligne */}
+            <div className="mt-4 space-y-2 text-sm md:text-base text-muted">
+              <div>
+                <span className="text-ink/80 font-semibold">Quand :</span>{" "}
+                <span>21 juillet 2026</span>
+              </div>
+              <div>
+                <span className="text-ink/80 font-semibold">Où :</span>{" "}
+                <span>Mahé, Seychelles</span>
+              </div>
+              <div>
+                <span className="text-ink/80 font-semibold">Tenue :</span>{" "}
+                <span>Chic &amp; colorée</span>
+              </div>
+            </div>
+
             <p className="mt-5 text-muted leading-relaxed">
-              Les détails précis (horaires, point de rendez-vous, etc.) seront mis à jour dans la page
-              Programme à mesure que l’on se rapproche du jour J.
+              Les détails précis (horaires, point de rendez-vous, etc.) seront mis à jour dans la
+              page Programme à mesure que l’on se rapproche du jour J.
             </p>
           </div>
         </div>
