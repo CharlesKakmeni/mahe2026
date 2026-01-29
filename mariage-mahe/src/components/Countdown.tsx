@@ -85,7 +85,7 @@ export default function Countdown() {
       </div>
 
       <p className="mt-3 text-xs text-cream/80">
-        {isPast ? "C’est le grand jour 🎉" : "Rendez-vous le 21 juillet."}
+        {isPast ? "C’est le grand jour 🎉" : " "}
       </p>
     </div>
   );
