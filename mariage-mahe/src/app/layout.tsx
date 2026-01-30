@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Alex_Brush, Cormorant_Garamond, Inter } from "next/font/google";
+import { Great_Vibes, Cormorant_Garamond, Inter, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const script = Alex_Brush({
+const script = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
@@ -16,19 +16,28 @@ const serif = Cormorant_Garamond({
   variable: "--font-serif",
 });
 
+const display = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+});
+
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Arlette & Paul Richard — Mariage à Mahé",
-  description: "Mariage Arlette & Paul Richard — Mahé, Seychelles",
+  title: "Arlette & Paul-Richard — Mariage à Mahé",
+  description: "Mariage Arlette & Paul-Richard — Mahé, Seychelles",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${script.variable} ${serif.variable} ${sans.variable}`}>
+    <html
+      lang="fr"
+      className={`${script.variable} ${serif.variable} ${display.variable} ${sans.variable}`}
+    >
       <body className="min-h-screen font-[var(--font-sans)]">
         <Nav />
         {children}

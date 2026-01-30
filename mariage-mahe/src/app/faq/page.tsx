@@ -67,7 +67,7 @@ const items = [
   },
   {
     q: "Qui contacter en cas de question ?",
-    a: "Pour toute question concernant le mariage ou l’organisation du séjour, vous pouvez contacter Arlette.",
+    a: "Pour toute question concernant le mariage ou l’organisation du séjour, vous pouvez contacter Arlette et Rita au +237 96 26 92 59",
   },
 ];
 

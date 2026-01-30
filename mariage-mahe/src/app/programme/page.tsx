@@ -17,7 +17,7 @@ const days = [
         time: "Soirée",
         title: "Welcome party",
         desc:
-          "On se retrouve pour lancer ce week-end en beauté : échanges, musique, et premiers souvenirs ensemble.",
+          "On se retrouve pour lancer les festivités. Échanges, musique, et premiers souvenirs ensemble.",
       },
     ],
   },
@@ -61,7 +61,7 @@ const days = [
         time: "Soirée",
         title: "Dîner de clôture",
         desc:
-          "Un dernier dîner ensemble pour conclure ces journées en beauté. Les détails seront mis à jour ici.",
+          "Un dernier dîner ensemble pour conclure ces journées en beauté. Les détails seront partagés dès que possible.",
       },
     ],
   },
@@ -73,7 +73,9 @@ export default function ProgrammePage() {
       <Container className="py-12 md:py-16">
         {/* Header */}
         <div className="text-center">
-          <p className="uppercase tracking-[0.35em] text-xs text-muted">Week-end de célébration</p>
+          <p className="uppercase tracking-[0.35em] text-xs text-muted">
+            Trois jours de célébration
+          </p>
           <h1
             className="mt-3 text-4xl md:text-5xl text-ink"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -81,9 +83,7 @@ export default function ProgrammePage() {
             Le Programme
           </h1>
           <p className="mt-4 text-muted max-w-2xl mx-auto leading-relaxed">
-            Trois jours pour se retrouver, célébrer et partager des souvenirs.{" "}
-            <span className="font-medium text-ink/70">Pensez à consulter régulièrement cette page</span>{" "}
-            : elle sera mise à jour au fur et à mesure.
+            Trois journées pour se retrouver, célébrer et partager des souvenirs.
           </p>
         </div>
 
@@ -151,14 +151,9 @@ export default function ProgrammePage() {
           <div className="mx-auto max-w-3xl p-6 rounded-xl2 bg-forest text-cream border border-white/10 shadow-soft">
             <p className="uppercase tracking-[0.28em] text-[11px] text-cream/80">À noter</p>
             <p className="mt-2 text-sm text-cream/90 leading-relaxed">
-              Les horaires et le détail des activités peuvent évoluer. Merci de consulter le site régulièrement
-              pour les updates — nous mettrons cette page à jour dès que nécessaire.
+              Certaines informations (notamment les activités) seront précisées au fur et à mesure.
             </p>
           </div>
-
-          <p className="mt-6 text-center text-xs text-muted">
-            Une question ? Consulte la FAQ ou écris-nous via RSVP.
-          </p>
         </div>
       </Container>
     </main>

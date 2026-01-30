@@ -33,11 +33,25 @@ body {
 .hero-img-c { animation: fadeC 18s infinite ease-in-out; }
 
 @layer base {
+  /* ✅ Mobile/tablette: pas de justification (meilleure lisibilité) */
   p {
-    @apply text-justify;
+    @apply text-left;
   }
 
   li {
-    @apply text-justify;
+    @apply text-left;
+  }
+
+  /* ✅ Desktop uniquement: justification */
+  @media (min-width: 1024px) {
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    li {
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
 }

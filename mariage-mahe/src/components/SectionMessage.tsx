@@ -3,19 +3,25 @@ import Image from "next/image";
 export default function SectionMessage() {
   return (
     <section className="bg-cream">
-      {/* Mobile: padding confortable | Desktop: plus à gauche */}
       <div className="mx-auto max-w-6xl px-5 sm:px-4 pt-14 md:pt-18 pb-4 md:pb-12 lg:pl-0 lg:pr-40 lg:pb-6">
-        {/* Date block (centré même en desktop décalé) */}
+        {/* Date block */}
         <div className="w-full flex justify-center">
           <div className="text-center">
+            {/* ✅ Même taille VISUELLE : on corrige "JUILLET" */}
             <p
-              className="text-3xl md:text-5xl text-ink tracking-wide"
+              className="text-2xl md:text-2xl text-ink uppercase tracking-[0.14em]"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              21 JUILLET, 2026
+              <span className="inline-block align-baseline">21</span>
+
+              {/* JUILLET paraît + grand visuellement -> on le compresse légèrement */}
+              <span className="inline-block align-baseline mx-2 md:mx-3 origin-center scale-y-[0.92]">
+                Juillet,
+              </span>
+
+              <span className="inline-block align-baseline">2026</span>
             </p>
 
-            {/* ✅ Nouvelle baseline (créative, non redondante) */}
             <p className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.35em] text-muted">
               Une journée à célébrer ensemble
             </p>
@@ -64,7 +70,6 @@ export default function SectionMessage() {
         </div>
       </div>
 
-      {/* Divider */}
       <div className="h-2 md:h-12 bg-gradient-to-b from-cream to-cream/60" />
     </section>
   );
