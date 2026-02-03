@@ -6,10 +6,45 @@ import { cn } from "@/lib/cn";
 
 export default function RSVPPage() {
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setIsSubmitting(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("fullName") as string,
+      email: formData.get("email") as string,
+      guests: formData.get("guests") as string,
+      attending: formData.get("attendance") === "yes",
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Erreur lors de l'envoi");
+      }
+
+      setSent(true);
+    } catch (err) {
+      console.error("Erreur:", err);
+      setError(err instanceof Error ? err.message : "Une erreur est survenue");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -39,15 +74,15 @@ export default function RSVPPage() {
             ) : (
               <form onSubmit={onSubmit} className="space-y-5">
                 <Field label="Nom complet *">
-                  <Input required name="fullName" />
+                  <Input required name="fullName" disabled={isSubmitting} />
                 </Field>
 
                 <Field label="Email *">
-                  <Input required type="email" name="email" />
+                  <Input required type="email" name="email" disabled={isSubmitting} />
                 </Field>
 
                 <Field label="Nombre d'invités">
-                  <Select name="guests" defaultValue="1">
+                  <Select name="guests" defaultValue="1" disabled={isSubmitting}>
                     <option value="1">1 personne</option>
                     <option value="2">2 personnes</option>
                     <option value="3">3 personnes</option>
@@ -56,7 +91,7 @@ export default function RSVPPage() {
                 </Field>
 
                 <Field label="Présence *">
-                  <Select required name="attendance" defaultValue="">
+                  <Select required name="attendance" defaultValue="" disabled={isSubmitting}>
                     <option value="" disabled>
                       Sélectionnez une option
                     </option>
@@ -66,14 +101,26 @@ export default function RSVPPage() {
                 </Field>
 
                 <Field label="Message pour les mariés">
-                  <Textarea name="message" rows={5} placeholder="Partagez vos vœux..." />
+                  <Textarea 
+                    name="message" 
+                    rows={5} 
+                    placeholder="Partagez vos vœux..." 
+                    disabled={isSubmitting}
+                  />
                 </Field>
+
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
 
                 <button
                   type="submit"
-                  className="mt-3 w-full rounded-lg bg-forest py-3 text-cream font-semibold tracking-[0.22em] uppercase hover:opacity-95"
+                  disabled={isSubmitting}
+                  className="mt-3 w-full rounded-lg bg-forest py-3 text-cream font-semibold tracking-[0.22em] uppercase hover:opacity-95 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
                 >
-                  Confirmer
+                  {isSubmitting ? "Envoi en cours..." : "Confirmer"}
                 </button>
               </form>
             )}
