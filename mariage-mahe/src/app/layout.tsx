@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Great_Vibes, Cormorant_Garamond, Inter, Playfair_Display } from "next/font/google";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import { Parisienne, Cormorant_Garamond, Inter, Playfair_Display } from "next/font/google";
+import AuthGuard from "@/components/AuthGuard";
+import LayoutContent from "@/components/LayoutContent";
 
-const script = Great_Vibes({
+const script = Parisienne({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
@@ -28,8 +28,8 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arlette & Paul-Richard — Mariage à Mahé",
-  description: "Mariage Arlette & Paul-Richard — Mahé, Seychelles",
+  title: "Arlette & Paul Richard — Mariage à Mahé",
+  description: "Mariage Arlette & Paul Richard — Mahé, Seychelles",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -39,9 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${script.variable} ${serif.variable} ${display.variable} ${sans.variable}`}
     >
       <body className="min-h-screen font-[var(--font-sans)]">
-        <Nav />
-        {children}
-        <Footer />
+        <AuthGuard>
+          <LayoutContent>{children}</LayoutContent>
+        </AuthGuard>
       </body>
     </html>
   );

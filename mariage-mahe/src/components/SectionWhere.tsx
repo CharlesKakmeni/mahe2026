@@ -33,40 +33,21 @@ export default function SectionWhere() {
 
           {/* Text */}
           <div className="pt-6 lg:pt-2">
-            <p className="uppercase tracking-[0.35em] text-xs text-muted">
-              Là où tout se célèbre 
-            </p>
-
-            <h2
-              className="mt-3 text-4xl md:text-5xl text-ink"
-              style={{ fontFamily: "var(--font-serif)" }}
-            >
-              Mahé, Seychelles
-            </h2>
 
             <p className="mt-5 text-muted leading-relaxed">
-              Nous vous invitons à célébrer nos renouvellement des vœux du 20 au 22 juillet.
+              Du <b>20</b> au <b>22 juillet</b>, entre ciel et océan, là où le temps semble suspendu, nous vous invitons à partager ce moment unique et précieux pour nous.
             </p>
 
-            {/* ✅ Lieu / Date / Tenue ligne par ligne */}
-            <div className="mt-4 space-y-2 text-sm md:text-base text-muted">
-              <div>
-                <span className="text-ink/80 font-semibold">Quand :</span>{" "}
-                <span>21 juillet 2026</span>
-              </div>
-              <div>
-                <span className="text-ink/80 font-semibold">Où :</span>{" "}
-                <span>Mahé, Seychelles</span>
-              </div>
-              <div>
-                <span className="text-ink/80 font-semibold">Tenue :</span>{" "}
-                <span>Chic &amp; colorée</span>
-              </div>
-            </div>
+            <p className="mt-4 text-muted leading-relaxed">
+              Nous célébrerons l’amour,  l’engagement et la joie d’être entourés, dans le cadre idyllique des Seychelles.
+            </p>
+
+            <p className="mt-4 text-muted leading-relaxed">
+              Pour ce moment inoubliable, soyons beaux et rayonnants. Osons le chic, osons l’originalité, osons la couleur !
+            </p>
 
             <p className="mt-5 text-muted leading-relaxed">
-              Les détails précis (horaires, point de rendez-vous, etc.) seront mis à jour dans la
-              page Programme à mesure que l’on se rapproche du jour J.
+              Dans les jours à venir, les détails pratiques seront dévoilés dans la rubrique Programme.
             </p>
           </div>
         </div>
@@ -82,8 +63,7 @@ export default function SectionWhere() {
             Infos pratiques
           </p>
           <p className="mt-2 text-cream/75 text-sm">
-            Toutes les informations pratiques, notamment les formalités d’entrée aux Seychelles,
-            sont disponibles dans la page FAQ.
+            Pour vous aider à préparer votre séjour, nous avons regroupé toutes les informations utiles dans la FAQ. Pensez à la consulter.
           </p>
         </div>
       </div>

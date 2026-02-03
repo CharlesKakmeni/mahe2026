@@ -4,20 +4,14 @@ import { cn } from "@/lib/cn";
 const days = [
   {
     dayLabel: "20 Juillet",
-    title: "Welcome party & activités",
+    title: "Découverte & activités",
     subtitle: "Découverte de l’île • Ambiance détendue • Détails à venir",
     items: [
       {
         time: "Après-midi",
         title: "Activités & découverte",
         desc:
-          "Découverte de l’île et activités à préciser. Le programme détaillé sera communiqué dès qu’il sera finalisé.",
-      },
-      {
-        time: "Soirée",
-        title: "Welcome party",
-        desc:
-          "On se retrouve pour lancer les festivités. Échanges, musique, et premiers souvenirs ensemble.",
+          "Temps libre dédié à la découverte de l’île et diverses activités. Le programme détaillé sera communiqué ultérieurement, une fois finalisé.",
       },
     ],
   },
@@ -30,7 +24,7 @@ const days = [
         time: "15:00",
         title: "Arrivée des invités",
         desc:
-          "Accueil des invités et installation. Merci de prévoir un peu d’avance pour profiter sereinement du début de cérémonie.",
+          "Accueil des invités et installation. Nous vous invitons à arriver légèrement en avance afin de profiter pleinement et sereinement du début de la cérémonie.",
       },
       {
         time: "15:30",
@@ -42,11 +36,11 @@ const days = [
         time: "16:00 – 17:00",
         title: "Cérémonie",
         desc:
-          "La cérémonie se déroulera dans un cadre naturel, intime et élégant. Merci de couper ou mettre en silencieux vos téléphones.",
+          "La cérémonie se déroulera dans un cadre naturel, intime et élégant.",
       },
       {
         time: "18:00",
-        title: "Arrivée dans la salle",
+        title: "Réception",
         desc:
           "Transition vers le lieu de réception, installation et début des festivités dans une ambiance chaleureuse.",
       },
@@ -73,16 +67,14 @@ export default function ProgrammePage() {
       <Container className="py-12 md:py-16">
         {/* Header */}
         <div className="text-center">
-          <p className="uppercase tracking-[0.35em] text-xs text-muted">
-            Trois jours de célébration
-          </p>
+
           <h1
             className="mt-3 text-4xl md:text-5xl text-ink"
             style={{ fontFamily: "var(--font-serif)" }}
           >
             Le Programme
           </h1>
-          <p className="mt-4 text-muted max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-muted max-w-2xl mx-auto leading-relaxed text-center">
             Trois journées pour se retrouver, célébrer et partager des souvenirs.
           </p>
         </div>
@@ -151,7 +143,7 @@ export default function ProgrammePage() {
           <div className="mx-auto max-w-3xl p-6 rounded-xl2 bg-forest text-cream border border-white/10 shadow-soft">
             <p className="uppercase tracking-[0.28em] text-[11px] text-cream/80">À noter</p>
             <p className="mt-2 text-sm text-cream/90 leading-relaxed">
-              Certaines informations (notamment les activités) seront précisées au fur et à mesure.
+              Certaines informations, notamment les activités, seront communiquées progressivement.
             </p>
           </div>
         </div>

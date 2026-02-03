@@ -53,18 +53,18 @@ export default function SectionMessage() {
             </h2>
 
             <p className="mt-5 text-muted leading-relaxed">
-              Nous sommes très heureux de vous inviter à partager ce moment unique avec nous.
-              Votre présence compte énormément et nous avons hâte de vivre cette journée à vos côtés,
-              dans le cadre magique de Mahé.
+              Le 21 juillet 2007, nous nous sommes dit « OUI ».
+              Après 19 années d'amour, de rires, de complicité et de souvenirs, nous choisissons de bénir notre union et de renouveler nos vœux… avec vous à nos côtés.
             </p>
 
             <p className="mt-4 text-muted leading-relaxed">
-              Vous trouverez le programme, les infos pratiques et le RSVP sur ce site. Merci pour votre
-              soutien, votre affection, et pour faire partie de notre histoire.
+              Votre présence est une lumière qui rend ce moment encore plus magique.
+              Merci de faire partie de notre histoire, de nos joies et de nos instants partagés.
+              Votre affection et votre soutien nous honorent et c’est le cœur rempli de joie et de gratitude que nous célébrerons cet instant unique avec vous.
             </p>
 
             <p className="mt-5 text-ink/80" style={{ fontFamily: "var(--font-script)" }}>
-              Avec amour, Arlette &amp; Paul Richard
+              Avec tout notre amour, Arlette &amp; Paul Richard
             </p>
           </div>
         </div>

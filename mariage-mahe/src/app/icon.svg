@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true">
+  <g fill="none" stroke="#1F1B17" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A (courbes + barre élégante) -->
+    <path d="M62 196 C78 140 92 102 112 62 C132 104 146 142 162 196" />
+    <path d="M82 144 H140" />
+
+    <!-- P (hampe + boucle généreuse) -->
+    <path d="M168 196 V64" />
+    <path d="M168 64 H196
+             C216 64 226 76 226 94
+             C226 114 214 126 194 126
+             H168" />
+  </g>
+</svg>
