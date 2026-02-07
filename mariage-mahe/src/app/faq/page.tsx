@@ -116,7 +116,7 @@ const items = [
   },
   {
     q: "Y a-t-il une liste de cadeaux ?",
-    a: "Votre présence à nos côtés pour célébrer ce renouvellement de vœux est, à nos yeux, le plus beau des cadeaux. La cérémonie ayant lieu à l’étranger, il nous sera toutefois difficile d’acheminer des présents matériels. Pour celles et ceux qui le souhaitent, une cagnotte en ligne sera proposée, en toute simplicité, pour la symbolique du geste.Nous vous communiquerons le lien dès que possible.",
+    a: "Votre présence à nos côtés pour célébrer ce renouvellement de vœux est, à nos yeux, le plus beau des cadeaux. La cérémonie ayant lieu à l’étranger, il nous sera difficile d’acheminer des présents matériels. Pour celles et ceux qui le souhaitent, une cagnotte en ligne sera proposée, en toute simplicité, pour la symbolique du geste.Nous vous communiquerons le lien dès que possible.",
   },
   {
     q: "Qui contacter en cas de question ?",
