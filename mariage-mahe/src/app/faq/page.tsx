@@ -9,7 +9,7 @@ const items = [
       <>
         Les Seychelles ne demandent pas de visa préalable pour de nombreuses nationalités (notamment
         Camerounaise, Congolaise, Nigériane, Française, Américaine, Canadienne). En revanche, tous
-        les voyageurs — quelle que soit leur nationalité — doivent obtenir une autorisation de voyage
+        les voyageurs, quelle que soit leur nationalité, doivent obtenir une autorisation de voyage
         en ligne avant le départ (Travel Authorization).
         <br />
         <br />
@@ -107,8 +107,73 @@ const items = [
   },
 
   {
+    q: "Comment se déplacer sur l’île de Mahé ?",
+    a: (
+      <>
+        La location de voiture est pratique pour explorer librement Mahé. Les bus et les taxis restent
+        également des alternatives possibles pour les courts trajets.
+        <br />
+        <br />
+        Pour la location de voitures, nous recommandons :
+        <br />
+        • Tropicar Mahé Cars
+        <br />
+        • SIXT
+        <br />
+        <br />
+        <span className="text-muted">
+          À noter : Les prix standards peuvent évoluer selon la demande et la saison.
+        </span>
+        <br />
+        <br />
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <figure className="rounded-2xl overflow-hidden border border-ink/10 bg-white">
+            <div className="relative w-full h-[320px] md:h-[420px] bg-cream">
+              <Image
+                src="/faq/sixt_clean_v2.png"
+                alt="SIXT — Tarifs indicatifs (Mahé, Seychelles)"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <figcaption className="px-4 py-3 text-sm text-muted flex flex-wrap items-center gap-2">
+              <span>SIXT — tarifs indicatifs (EUR)</span>
+              <a
+                href="https://www.sixt.com/suv-rental/seychelles/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-forest underline underline-offset-4 decoration-forest/40 hover:decoration-forest"
+              >
+                Voir le site
+              </a>
+            </figcaption>
+          </figure>
+
+          <figure className="rounded-2xl overflow-hidden border border-ink/10 bg-white">
+            <div className="relative w-full h-[320px] md:h-[420px] bg-cream">
+              <Image
+                src="/faq/tropicar_pro_clean.png"
+                alt="Tropicar — Informations & véhicules (Mahé, Seychelles)"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <figcaption className="px-4 py-3 text-sm text-muted flex flex-wrap items-center gap-2">
+              <span>Tropicar — informations & véhicules</span>
+
+            </figcaption>
+          </figure>
+        </div>
+      </>
+    ),
+  },
+
+  {
     q: "Y a-t-il des hébergements à proximité ?",
-    a: "La ceremonie se deroulera dans le quartier du Beau Vallon, nous vous recommandons d'y choisir vos logements. Nous vous proposerons très prochainement des hotels et appartements meublés se trouvant dans le secteur",
+    a: "La cérémonie se déroulera dans le quartier du Beau Vallon, nous vous recommandons d'y choisir vos logements. Nous vous proposerons très prochainement des hôtels et appartements meublés se trouvant dans le secteur.",
   },
   {
     q: "Quand dois-je confirmer ma présence ?",
@@ -116,7 +181,7 @@ const items = [
   },
   {
     q: "Y a-t-il une liste de cadeaux ?",
-    a: "Votre présence à nos côtés pour célébrer ce renouvellement de vœux est, à nos yeux, le plus beau des cadeaux. La cérémonie ayant lieu à l’étranger, il nous sera difficile d’acheminer des présents matériels. Pour celles et ceux qui le souhaitent, une cagnotte en ligne sera proposée, en toute simplicité, pour la symbolique du geste.Nous vous communiquerons le lien dès que possible.",
+    a: "Votre présence à nos côtés pour célébrer ce renouvellement de vœux est, à nos yeux, le plus beau des cadeaux. La cérémonie ayant lieu à l’étranger, il nous sera difficile d’acheminer des présents matériels. Pour celles et ceux qui le souhaitent, une cagnotte en ligne sera proposée, en toute simplicité, pour la symbolique du geste. Nous vous communiquerons le lien dès que possible.",
   },
   {
     q: "Qui contacter en cas de question ?",
@@ -127,7 +192,6 @@ const items = [
     a: "Les Seychelles fonctionnent toute l’année sur le fuseau horaire GMT+4. Nous vous invitons à en tenir compte lors de l’organisation de votre séjour.",
   },
 
-  // ✅ SIM + image sans "bande blanche" (caption en texte séparé)
   {
     q: "Comment rester connecté aux Seychelles ?",
     a: (

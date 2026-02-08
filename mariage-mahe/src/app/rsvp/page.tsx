@@ -55,7 +55,7 @@ export default function RSVPPage() {
             className="text-3xl md:text-5xl text-ink"
             style={{ fontFamily: "var(--font-serif)" }}
           >
-            Confirmez votre Présence
+            Confirmez votre présence
           </h1>
           <p className="mt-3 text-muted max-w-xl mx-auto leading-relaxed">
             Merci de remplir ce formulaire pour nous aider à organiser cette journée.

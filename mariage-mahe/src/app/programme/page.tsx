@@ -8,7 +8,7 @@ const days = [
     subtitle: "Découverte de l’île • Ambiance détendue • Détails à venir",
     items: [
       {
-        time: "Après-midi",
+        time: "Journée",
         title: "Activités & découverte",
         desc:
           "Temps libre dédié à la découverte de l’île et diverses activités. Le programme détaillé sera communiqué ultérieurement, une fois finalisé.",
